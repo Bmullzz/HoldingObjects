@@ -1,16 +1,15 @@
 import java.util.TreeMap;
-import java.util.Set;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Created by brianmullin on 5/16/17.
  */
 public class PhoneBook {
+    //private Scanner input = new Scanner(System.in);
 
-    //private String name;
-    //private String phoneNumber;
-    public static Map<String, String> phoneBook = new TreeMap<String, String>();
+    public static Map<String, List<String>> phoneBook = new TreeMap<String, List<String>>();
 
     public PhoneBook(){}
 
@@ -22,6 +21,7 @@ public class PhoneBook {
 
 
     public String addEntries(String name, String phoneNumber){
+
         phoneBook.put(name, phoneNumber);
 
         return "The entry associated with " + phoneBook.get(name) + " was added to phoneBook";

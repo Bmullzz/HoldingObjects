@@ -7,9 +7,10 @@ public class App {
 
     public static void main(String[] args){
 
-        Scanner input = new Scanner();
+        Scanner input = new Scanner(System.in);
 
         PhoneBook book = new PhoneBook();
+        book.addEntries("brian", "1800");
 
         System.out.println("Welcome to the Phone Book database.\n" +
                 "What would you like to do?\n" +
@@ -20,16 +21,27 @@ public class App {
                 "Enter the number associated with the function you want to perform:");
 
         int choice = input.nextInt();
-        switch (choice){
-            case 1: System.out.println("Enter the name you would like to search for:");
-                    String name =
+
+        //if(choice == 1){
+            //System.out.println("Enter the name you would like to search for:");
+            String name = input.nextLine();
+            book.lookUpByName(name);
+            //break;
+
+        //}
 
 
 
-        }
 
-        book.addEntries("brian", "1800");
+            //case 2: System.out.println("Enter the number you would like to search for:");
+                    //String number = input.nextLine();
+                    //book.reverseLookUp(number);
+                    //break;
 
-        System.out.println(book.lookUpByName("brian"));
+
+
+        //book.addEntries("brian", "1800");
+
+        //System.out.println(book.lookUpByName("brian"));
     }
 }
