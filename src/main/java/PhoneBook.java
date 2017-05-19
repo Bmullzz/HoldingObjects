@@ -16,7 +16,6 @@ public class PhoneBook {
 
 
     public String lookUpByName(String name){
-
         String entry = phoneBook.get(name);
         return entry;
     }
@@ -50,7 +49,7 @@ public class PhoneBook {
         for(Map.Entry<String, String> entry : phoneBook.entrySet()){
             if(entry.getValue().equals(phoneNumber))
                 name += entry.getKey();
-            //break;
+
 
         }
         return name;
